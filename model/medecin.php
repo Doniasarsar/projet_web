@@ -1,129 +1,69 @@
 <?PHP
   class medecin
   {
-    private $CIN_medecin;
-    private $Nom_medecin;
-    private $Prenom_medecin;
-	private $date_medecin;
-	private $specialite;
-	private $fonction;
-	private $Login_medecin;
-	private $MDP_medecin;
-	private $phone_medecin;
-    private $Adresse_medecin;
+    private $idmedecin;
+    private $nom;
+    private $prenom;
+    private $numero_de_telephone;
+    private $Login_medecin;
   
-	function __construct(int $CIN_medecin, string $Nom_medecin, string $Prenom_medecin, string $date_medecin, string $specialite, string $fonction, string $Login_medecin, string $MDP_medecin, int $phone_medecin, string $Adresse_medecin){
+	function __construct(int $idmedecin, string $nom, string $prenom, int $numero_de_telephone, string $Login_medecin){
 			
-      $this->CIN_medecin=$CIN_medecin;
-      $this->Nom_medecin=$Nom_medecin;
-      $this->Prenom_medecin=$Prenom_medecin;
-	  $this->date_medecin=$date_medecin;
-	  $this->specialite=$specialite;
-	  $this->fonction=$fonction;
-	  $this->Login_medecin=$Login_medecin;
-	  $this->MDP_medecin=$MDP_medecin;
-	  $this->phone_medecin=$phone_medecin;
-      $this->Adresse_medecin=$Adresse_medecin;
+      $this->idmedecin=$idmedecin;
+      $this->nom=$nom;
+      $this->prenom=$prenom;
+      $this->numero_de_telephone=$numero_de_telephone;
+      $this->Login_medecin=$Login_medecin;
     }
 		
-    public function getCIN_medecin()
+    public function getIdmedecin()
     {
-      return $this->CIN_medecin;
+      return $this->idmedecin;
     }
   
-    public function getNom_medecin()
+    public function getnom()
     {
-      return $this->Nom_medecin;
+      return $this->nom;
     }
   
-    public function getPrenom_medecin()
+    public function getprenom()
     {
-      return $this->Prenom_medecin;
+      return $this->prenom;
     }
-	
-	public function getdate_medecin()
+  
+    public function getnumero_de_telephone()
     {
-      return $this->date_medecin;
+      return $this->numero_de_telephone;
     }
-	
-	public function getspecialite()
-    {
-      return $this->specialite;
-    }
-	
-	public function getnbreMedecin()
-    {
-      return $this->fonction;
-    }
-	
-	public function getLogin_medecin()
+
+    public function getLogin_medecin()
     {
       return $this->Login_medecin;
     }
-	
-	public function getMDP_medecin()
+
+    public function setIdmedecin($id)
     {
-      return $this->MDP_medecin;
+      $this->idmedecin = $id;
     }
   
-	public function getphone_medecin()
+    public function setnom($nom)
     {
-      return $this->phone_medecin;
+      $this->nom = $nom;
     }
-	
-    public function getAdresse_medecin()
+  
+    public function setprenom($prenom)
     {
-      return $this->Adresse_medecin;
+      $this->prenom = $prenom;
+    }
+  
+    public function setnumero_de_telephone($numero_de_telephone)
+    {
+      $this->numero_de_telephone = $numero_de_telephone;
     }
 
-    public function setCIN_medecin($id)
-    {
-      $this->CIN_medecin = $id;
-    }
-  
-    public function setNom_medecin($Nom_medecin)
-    {
-      $this->Nom_medecin = $Nom_medecin;
-    }
-  
-    public function setPrenom_medecin($Prenom_medecin)
-    {
-      $this->Prenom_medecin = $Prenom_medecin;
-    }
-	
-	public function setdate_medecin($date_medecin)
-    {
-      $this->date_medecin = $date_medecin;
-    }
-	
-	public function setspecialite($specialite)
-    {
-      $this->specialite = $specialite;
-    }
-	
-	public function setnbreMedecin($fonction)
-    {
-      $this->fonction = $fonction;
-    }
-	
-	public function setLogin_medecin($Login_medecin)
+    public function setLogin_medecin($Login_medecin)
     {
       $this->Login_medecin = $Login_medecin;
-    }
-	
-	public function setMDP_medecin($MDP_medecin)
-    {
-      $this->MDP_medecin = $MDP_medecin;
-    }
-	
-	public function setphone_medecin($phone_medecin)
-    {
-      $this->phone_medecin = $phone_medecin;
-    }
-  
-    public function setAdresse_medecin($Adresse_medecin)
-    {
-      $this->Adresse_medecin = $Adresse_medecin;
     }
   }
 ?>
